@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS senati;
+USE senati;
+
+CREATE TABLE IF NOT EXISTS estudiantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    fecha_nacimiento DATE NOT NULL, -- Corregido a DATE
+    correo VARCHAR(100) NOT NULL
+);
+
+INSERT INTO estudiantes (nombre, apellido, fecha_nacimiento, correo) VALUES 
+('Juan', 'Pérez', '2005-05-15', 'juan.perez@senati.pe'),
+('Ana', 'García', '2004-10-20', 'ana.garcia@senati.pe'),
+('Luis', 'Sánchez', '2006-01-12', 'luis.sanchez@senati.pe');
